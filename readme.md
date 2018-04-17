@@ -2,7 +2,7 @@
 
 Create a web app that's as close as possible to the wireframe below.
 
-![img](https://gyazo.com/c98099cb56b9d5ca86d66f4dc55af5f5)
+![img](https://gyazo.com/c98099cb56b9d5ca86d66f4dc55af5f5.png)
 
 
 ## Stretch Goals
