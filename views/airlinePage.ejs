@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    div {
+      border: solid;
+    }
+    </style>
+  </head>
+  <body>
+    <h1><%= trips[0].airline_name %></h1>
+    <p>
+      <%=  trips[0].desc %>
+    </p>
+    <h1>Trips Planned</h1>
+      <% for(let i=0; i<trips.length; i++){ %>
+        <div>
+          <h1>Trip Name: <%= trips[i].trip_name %></h1>
+          <p>
+            Airline: <%= trips[0].airline_name %>
+          </p>
+          <p>
+Date: <%= trips[i].date %>
+          </p>
+          <p>
+To: <%= trips[i].to %>
+          </p>
+          <p>
+From: <%= trips[i].from%>
+          </p>
+<a href="/editPage/<%=trips[i].trip_id%>">Edit Trip</a>
+        </div>
+
+        <% } %>
+  </body>
+</html>

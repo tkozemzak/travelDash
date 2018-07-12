@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    </style>
+  </head>
+  <body>
+
+
+
+    <a href="/welcomePage">Back</a>
+    <h1>Edit Trip</h1>
+    <form action="/editPage" method="post">
+  <input type="text" name="trip_name" placeholder=<%= trips[0].trip_name%> />
+  <input type="text" name="from" placeholder=<%= trips[0].from%> />
+  <input type="text" name="to" placeholder=<%= trips[0].to%> />
+
+<input type="date" name="date" />
+  <input type="submit" />
+</form>
+  </body>
+</html>

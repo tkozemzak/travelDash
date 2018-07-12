@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome Page</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      border: solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head">
+    <h1>Welcome <%= user.name %>!</h1>
+    <form>
+      <input type="button" value="Plan a Trip" onclick="window.location.href='/planPage'" />
+    </form>
+  </div>
+  <div class="trip-list">
+
+    <% for(let i=0; i<trips.length; i++){ %>
+          <div class="trip-data">
+
+            <h1><%= trips[i].trip_name %></h1>
+            <p>
+              Date:
+              <%= trips[i].date %>
+            </p>
+            <p>
+              <a href="/airlinePage/<%=trips[i].airline_id%>">Airline: <%= trips[i].airline_name%></a>
+            </p>
+
+            <a href="/editPage/<%=trips[i].trip_id%>">Edit Trip</a>
+          </div>
+          <% } %>
+  </div>
+</body>
+
+</html>
