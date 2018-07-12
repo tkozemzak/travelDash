@@ -18,15 +18,26 @@ module.exports = function(app){
 //welcome
   app.get('/welcomePage', welcomePage.index);
 
+
+app.use(authenticateUser)
 //plan
   app.get('/planPage', planPage.index);
   app.post('/planPage', planPage.addTrip);
 
   //edit
   app.get('/editPage/:id', editPage.index);
-  app.post('/editPage', editPage.edit)
+  app.post('/editPage/:id', editPage.edit)
 
 //airlinePage
   app.get('/airlinePage/:id', airlinePage.index)
 
+}
+
+
+function authenticateUser(req, res, next){
+  if(!req.session.user){
+    res.redirect('/');
+  } else {
+    next();
+  }
 }
