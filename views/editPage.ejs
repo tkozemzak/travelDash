@@ -22,10 +22,10 @@
     <a href="/welcomePage">Back</a>
     <h1>Edit Trip</h1>
     <form action="/editPage/<%=trips[0].id%>" method="post">
-  <input type="text" name="trip_name" placeholder=<%= trips[0].trip_name%> />
+  <input type="text" name="trip_name" value=<%= trips[0].trip_name%> />
   <input type="date" name="date" />
-  <input type="text" name="to" placeholder=<%= trips[0].to%> />
-  <input type="text" name="from" placeholder=<%= trips[0].from%> />
+  <input type="text" name="to" value=<%= trips[0].to%> />
+  <input type="text" name="from" value=<%= trips[0].from%> />
 
 
   <input type="submit" />
